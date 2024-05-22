@@ -1,0 +1,15 @@
+<div class="container">
+    <h3>This will be a Username Input!</h3>
+    <div class="form-group">
+        <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="userName"
+        placeholder="Enter your username"
+        />
+    </div>
+    <button class="btn btn-primary" [disabled]='userName === ""' (click)="onSubmit()">Submit</button>
+    <p [class.text-success]>
+        {{ message }}
+    </p>
+</div>

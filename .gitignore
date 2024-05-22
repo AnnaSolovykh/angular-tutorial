@@ -1,0 +1,34 @@
+# Ignore system files
+.DS_Store
+.Trash/
+
+# Ignore user configuration files
+.gitconfig
+.lesshst
+.vscode/
+.zcompdump
+.zprofile
+.zsh_history
+.zsh_sessions/
+.zshrc
+.viminfo
+
+# Ignore application and library directories
+Applications/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+
+# Ignore node_modules (if using Node.js)
+node_modules/
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore environment files
+.env

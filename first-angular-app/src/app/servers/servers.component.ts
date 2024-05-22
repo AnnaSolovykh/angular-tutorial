@@ -12,13 +12,21 @@ export class ServersComponent implements OnInit {
   // property binding
   //Property binding allows you to set values for properties or attributes of HTML elements dynamically
   allowNewServer = false;
+  serverCreationStatus = 'No server was created';
+  serverName = '';
+
   constructor() {
     setTimeout(()=>{
       this.allowNewServer = true;
     }, 2000)
   }
     ngOnInit() {
-
+  }
+  onCreateServer() {
+    this.serverCreationStatus  = 'Server was created';
+  }
+  onUpdateServerName(event: any) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 }
 

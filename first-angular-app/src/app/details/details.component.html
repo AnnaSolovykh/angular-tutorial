@@ -1,0 +1,16 @@
+<button 
+    class="btn btn-primary" 
+    (click)="onDetailsAdded()"
+>
+    Display details
+</button>
+<p *ngIf="detailsAdded; else noDetails">Secret details!</p>
+<ng-template #noDetails><p>No details to display</p></ng-template>
+
+<ul>
+    <li *ngFor="let log of clickLogs; let i = index" 
+        [ngStyle]="{backgroundColor: getColor(i)}"
+        [ngClass]="{textWhite: isTextWhite(i)}">
+        {{ log }}
+    </li>
+</ul>

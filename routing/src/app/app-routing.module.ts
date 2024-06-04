@@ -48,7 +48,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutes, { useHash: true })],//web server will ignore everything after hash, and will work eben on servers that don't return index.html files in case of 404 errors, the part after hash will be parsed by angular
   exports: [[RouterModule]],
 })
 export class AppRoutingModule {}
